@@ -42,7 +42,34 @@ var orm = {
              queryString += printQuestionMarks(vals.length);
              queryString += ')';
 
-             console.log(query)
+             console.log(queryString);
+             console.log(vals);
 
-    }
-}
+             // connect and run query
+             connection.query(queryString, vals, function(err, result){
+                 if (err) throw err;
+                 cb(result);
+             });
+
+    },
+
+    updateOne: function(table, objColVals, condition, cb) {
+		//build query 
+		var queryString = 'UPDATE ' + table;
+			queryString += ' SET ';
+			queryString += objToSql(objColVals);
+			queryString += ' WHERE ';
+			queryString += condition;
+
+			console.log(queryString);
+
+		//connect and run query
+		connection.query(queryString, function(err, result) {
+			if (err) throw err;
+			cb(result);
+		});
+	}
+};
+
+// Export ORM 
+module.exports = orm;
