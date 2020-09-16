@@ -10,4 +10,25 @@ function printQuestionMarks(num) {
     return err.toString();
 }
 
-function 
+function objTosql(ob) {
+    var arr = [];
+    for (var key in ob) {
+        if (ob.hasOwnProperty(key)) {
+            arr.push(key + '=' + ob[key]);
+        }
+    }
+    return arr.toString();
+}
+
+// creating the ORM
+var orm = {
+    selectAll: function(tableInput, cb) {
+        // build query
+        var queryString = "SELECT * FROM " + tableInput + ";";
+        // connect and run query
+        connection.query(queryString, function(err, result) {
+            if (err) throw err;
+            cb(result);
+        });
+    },
+}
