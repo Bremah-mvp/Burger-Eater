@@ -17,4 +17,9 @@ app.use(bodyParser.raw({ type: 'application/vnd.custom-type'}));
 app.use(bodyParser.text({ type: 'text/html' }));
 
 // override with POST having ?_method= DELETE or PUT
-app.use(methodOverride('_method'))
+app.use(methodOverride('_method'));
+
+// handlebars
+var exphbs = require("express-handlebars");
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("viwe engine", "handlebars");
