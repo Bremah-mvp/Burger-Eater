@@ -1,36 +1,35 @@
-// dependencies
-var express = require("express");
-var methodOverride = require("method-override");
-var bodyParser = require("body-parser");
+// Dependencies
+var express = require('express');
+var methodOverride = require('method-override');
+var bodyParser = require('body-parser');
 
 var PORT = process.env.PORT || 3000;
 
-// express app
+// Express app.
 var app = express();
-app.use(express.static(_dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
-// bodyparsers
-app.use(bodyParser.urlencoded({ extended: true}));
+// Bodyparsers 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/*+json' }));
-app.use(bodyParser.raw({ type: 'application/vnd.custom-type'}));
+app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }));
 app.use(bodyParser.text({ type: 'text/html' }));
 
-// override with POST having ?_method= DELETE or PUT
+// override with POST having ?_method=DELETE or PUT
 app.use(methodOverride('_method'));
 
-// handlebars
-var exphbs = require("express-handlebars");
+// Handlebars 
+var exphbs = require('express-handlebars');
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("viwe engine", "handlebars");
+app.set("view engine", "handlebars");
 
-// import routes
-var routes = require("./controller/burgers_controller.js");
+
+// Import routes
+var routes = require('./controllers/burgers_controller.js');
 app.use('/', routes);
 
-// initiate listener
+// Initiate listener
 app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
+  console.log("App listening on PORT " + PORT);
 });
-
-
