@@ -23,3 +23,9 @@ app.use(methodOverride('_method'));
 var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("viwe engine", "handlebars");
+
+// import routes
+var routes = require("./controller/burgers_controller.js");
+app.use('/', routes);
+
+
