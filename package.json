@@ -1,0 +1,24 @@
+{
+  "name": "burger-eater",
+  "version": "1.0.0",
+  "description": "burger eater app is an application where a user can select burgers to eat or create new burger types",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bremah-mvp/Burger-Eater.git"
+  },
+  "keywords": [
+    "try",
+    "it"
+  ],
+  "author": "mvpbremah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bremah-mvp/Burger-Eater/issues"
+  },
+  "homepage": "https://github.com/Bremah-mvp/Burger-Eater#readme"
+}
