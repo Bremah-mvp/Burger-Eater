@@ -28,4 +28,9 @@ app.set("viwe engine", "handlebars");
 var routes = require("./controller/burgers_controller.js");
 app.use('/', routes);
 
+// initiate listener
+app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+});
+
 
