@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Bremah-mvp/Burger-Eater#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "hbs": "^4.1.1",
     "method-override": "^3.0.0"
   }
 }
