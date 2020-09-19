@@ -20,11 +20,15 @@ app.use(bodyParser.text({ type: 'text/html' }));
 app.use(methodOverride('_method'));
 
 // Handlebars 
-var exphbs = require('express-handlebars');
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+var express = require('express');
+var exphbs  = require('express-handlebars');
 
+var app = express();
+var hbs = exphbs.create({ /* config */ });
 
+// Register `hbs.engine` with the Express app.
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 // Import routes
 var routes = require('./controllers/burgers_controller.js');
 app.use('/', routes);
