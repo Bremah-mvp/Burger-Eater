@@ -1,0 +1,28 @@
+{
+  "name": "burger-eater",
+  "version": "1.0.0",
+  "description": "The Burger Eater app shows burgers eaten, and available Burgers in the application ready to be eaten.\",",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "method-override": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bremah-mvp/Burger-Eater.git"
+  },
+  "keywords": [
+    "ready"
+  ],
+  "author": "Mvp Bremah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bremah-mvp/Burger-Eater/issues"
+  },
+  "homepage": "https://github.com/Bremah-mvp/Burger-Eater#readme"
+}
