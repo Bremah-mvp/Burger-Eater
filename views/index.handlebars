@@ -1,73 +1,116 @@
-<div class="container">
+<main class="container add-burger">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-sm-2"><img class="burger-ico" src="./assets/images/vegan-burger.png" alt="veggie-Burger" />
+    </div>
 
-	<div class="row">
-		<div class="col-md-12">
-			<img src="/assets/images/happyburger.jpg" alt="burger" class="img-responsive center-block">
-		</div>
-	</div><!-- end first row -->
+    <div class="col-sm-8 align-items-center">
+      <h1>Burger Eater</h1>
+    </div>
+  </div>
+  <div class="row">
+    <section class="col-sm">
+      <div class="container">
+        <div class="card-header">
+          <h2>Burger wish list!</h2>
+        </div>
+        {{#each burgers}}
+        {{#unless devoured}}
+        <div class="row burger-item align-items-center">
+          <div class="col-6">{{burger_name}}</div>
+          <div class="col-4"><button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">
+              Eat it!
+            </button></div>
+          <div class="col-2"><button class="delete-burger" data-id="{{this.id}}"><i
+                class="fas fa-trash-alt"></i></button>
+          </div>
+        </div>
+        {{/unless}}
+        {{/each}}
+      </div>
+    </section>
+    <section class="col-sm">
+      <img class="happy-cow" src="./assets/images/5f65025315819.png" alt="Happy Cow" />
+    </section>
+    <section class="col-sm">
+      <div class="container">
+        <div class="card-header">
+          <h2>Devoured list!</h2>
+        </div>
+        {{#each burgers}}
+        {{#if devoured}}
+        <div class="row burger-item ">
+          <div class="col-10">{{burger_name}}</div>
+          <div class="col-2"><button class="delete-burger" data-id="{{this.id}}"><i
+                class="fas fa-trash-alt"></i></button>
+          </div>
+        </div>
+        {{/if}}
+        {{/each}}
+      </div>
+    </section>
+  </div>
+  <section class="col-sm p-b-5">
+
+
+    <div class="burger-item">
+      <div class="row justify-content-center">
+
+        <div class="">
+          <h2>Add new burger!</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div>
+          <form class="create-form">
+            <div class="form-group">
+
+              <input placeholder="Burger Name" type="text" id="ca" name="name">
+            </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div>
+          <div class="form-group col">
+            <input type="radio" name="devoured" value="0" checked> Wish List!<br>
+            <input type="radio" name="devoured" value="1"> Devoured!
+          </div>
+          <div class="col"><button type="submit">Add burger</button></div>
+
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+
+{{!-- <div class="card" style="">
+  <div class="card-header">
+    <h2>Burgers I've devoured!</h2>
+  </div>
+  <ul class="list-group list-group-flush">
+    {{#each burgers}}
+    {{#if devoured}}
+    <li class="list-group-item">
+      {{burger_name}}
+      <button class="delete-burger" data-id="{{this.id}}"><i class="fas fa-trash-alt"></i></button>
+    </li>
+    {{/if}}
+    {{/each}}
+  </ul>
+</div> --}}
 
 
 
-	<div class="row">
-		<div class="col-md-12">
-			<h1 class="text-center text-danger">Burger-Eater</h1>
-		</div>
-	</div><!-- end second row -->
-
-
-
-	<div class="row">
-		<div class="col-md-5">
-			<h3> Burgers List</h3>
-			<ul>
-				{{#each burgers}}
-					{{#unless this.devoured}}
-						<li>
-							<h5>{{this.id}}. {{this.burger_name}}
-								<form action='burgers/updateOne/{{this.id}}?_method=PUT' method='POST'>
-									<input type='hidden' name='devoured' value='true'>
-									<button type='submit' class="btn btn-default">Devour it</button>
-								</form>
-							</h5>
-						</li>
-					{{/unless}}
-				{{/each}}
-			</ul>
-		</div><!-- end column 1 -->
-
-
-		<div class="col-md-2"></div><!-- spacer column -->
-
-
-		<div class="col-md-5">
-			<h3 class="text-muted">Devoured Burgers</h3>
-			<ul>
-				{{#each burgers}}
-					{{#if this.devoured}}
-						<li>
-							<h5 class="text-muted">{{this.id}}. {{this.burger_name}}</h5>
-						</li>
-					{{/if}}
-				{{/each}}
-			</ul>
-		</div><!-- end column 2 -->
-
-	</div><!-- end third row -->
-
-	<br><br>
-
-	<div class="row">
-		<div class="col-md-12 text-center">
-			<form class="create-update-form" action="burgers/insertOne" method="POST">
-				<div class="form-group">
-					<!-- <label for="bg">Burger Name:</label> -->
-					<textarea type="text" name="name"></textarea><br>
-					<button class="btn btn-default" type="submit">Submit</button>
-					<h5 class="text-center">Select desired burger then click Submit button.</h5>
-				</div>
-			</form>
-		</div>
-	</div><!-- end fourth row -->
-
-<!-- end bootstrap container -->
-</div>
+{{!-- <h2>Burgers I've devoured!</h2>
+<ul>
+  {{#each burgers}}
+  {{#if devoured}}
+  {{> burgers/burger-block devoured=0}}
+  {{/if}}
+  {{/each}}
+</ul> --}}
