@@ -1,9 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap');
+
 body {
-	background-color: #ebcf61;
-	margin-top: 20px;
+	background-image: url(./img/burger.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
-img {
-	width: 200px;
-	height: auto;
+div.jumbotron {
+	margin-top: -30px;
+	margin-bottom: -50px;
+}
+
+div.main {
+	background-color: transparent;
+}
+
+/* Add burger form styling */
+
+label[for="burger"] {
+	visibility: hidden;
+}
+
+div.add-burger {
+	width: 60%;
+	background-color: blue;
+	opacity: 1;
+	padding: 20px;
+	margin-bottom: 50px;
+}
+
+div.add-burger h2 {
+	font-size: 2rem;
+	font-family:'Times New Roman', Times, serif;
+	padding-top: 20px;
+}
+
+/* Burger list styling */
+
+div.burgers {
+	margin: 10px;
+}
+
+div.burgers .burger-heading {
+	font-size: 2rem;
+	padding: 20px;
+	font-family: 'Times New Roman', Times, serif;
+
+}
+
+div.burger-col {
+	background-color: blue;
+	min-height: 300px;
+}
+
+li.burger-li {
+	background-color: rgb(223, 221, 221);
+	list-style-type: none;
+	border-bottom: 1px solid black;
+}
+
+ul.burgers {
+	margin: 0 0 20px 0;
+	padding: 0 0 20px 0;
 }
