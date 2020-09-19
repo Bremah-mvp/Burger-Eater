@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap');
 
 body {
-	background-image: url(./img/burger.jpg);
+	background-image: url(./img/burger-bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -12,7 +12,7 @@ div.jumbotron {
 }
 
 div.main {
-	background-color: transparent;
+	background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Add burger form styling */
@@ -23,7 +23,7 @@ label[for="burger"] {
 
 div.add-burger {
 	width: 60%;
-	background-color: blue;
+	background-color: rgb(150, 148, 148);
 	opacity: 1;
 	padding: 20px;
 	margin-bottom: 50px;
@@ -31,7 +31,7 @@ div.add-burger {
 
 div.add-burger h2 {
 	font-size: 2rem;
-	font-family:'Times New Roman', Times, serif;
+	font-family: "Aguafina Script", serif;
 	padding-top: 20px;
 }
 
@@ -44,19 +44,18 @@ div.burgers {
 div.burgers .burger-heading {
 	font-size: 2rem;
 	padding: 20px;
-	font-family: 'Times New Roman', Times, serif;
-
+	font-family: "Aguafina Script", serif;
 }
 
 div.burger-col {
-	background-color: blue;
+	background-color: rgb(163, 162, 162);
 	min-height: 300px;
 }
 
 li.burger-li {
 	background-color: rgb(223, 221, 221);
 	list-style-type: none;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid gray;
 }
 
 ul.burgers {
