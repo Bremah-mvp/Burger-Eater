@@ -13,7 +13,7 @@ var mysql = require("mysql");
          port: 3306,
          user: "root",
          password: "Bremen12345$",
-         database: "burgers_"
+         database: "burgers_db"
      });
  };
 
