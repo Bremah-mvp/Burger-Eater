@@ -1,9 +1,2 @@
-INSERT INTO
-burgers
-  (burger_name, devoured)
-VALUES
-  ('Becon King', true),
-  ('Angry Whopper', true),
-  ('Spicy Chicken', false),
-  ('Regular Beef', false),
-  ('Double Stack', false);
+INSERT INTO burgers (burger_name, devoured)
+VALUES("Bacon King", 0), ("Double Stack Burger ", 0), ("Chicken Burger", 1)

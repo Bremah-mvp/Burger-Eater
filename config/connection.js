@@ -1,31 +1,28 @@
-// set up database connection
-var mysql = require("mysql");
+// Set up MySQL connection.
+const mysql = require('mysql');
+let connection;
 
- var connection;
+// Set up db connection in local or remote db
+if (process.env.JAWSDB_URL) {
+	connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+	connection = mysql.createConnection({
+		host: process.env.DB_HOST,
+		port: 3306,
+		user: process.env.DB_USER,
+		password: process.env.DB_PASSWORD,
+		database: 'burgers_db'
+	});
+}
 
- // set up for heroku
- if (process.env.JAWSDB_URL) {
-     connection = mysql.createConnection(process.env.JAWSDB_URL);
-
- } else {
-     connection.createConnection({
-         host: "localhost",
-         port: 3306,
-         user: "root",
-         password: "Bremen12345$",
-         database: "burgers_db"
-     });
- };
-
- // connect to database
+// Make connection.
 connection.connect(function(err) {
-    if (err) {
-        console.error("error during connect:" + err.stack + "\n");
-        return;
-    }
-    console.log("connected successfully as id:" + connection.threadId + "\n" );
+	if (err) {
+		console.error('error connecting: ' + err.stack);
+		return;
+	}
+	console.log('connected as id ' + connection.threadId);
 });
 
-// export the connection back to orm
+// Export connection for our ORM to use.
 module.exports = connection;
-
