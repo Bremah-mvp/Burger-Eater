@@ -1,2 +1,8 @@
-INSERT INTO burgers (burger_name, devoured)
-VALUES("Bacon Double Cheeseburger", 0), ("Black Bean Burger with Lettuce, Tomato and Avocado", 0), ("Chicken Burger", 1)
+INSERT INTO
+    burgers(burger_name, devoured)
+VALUES
+    ("Becon kingjr", FALSE),
+    ("Spicy chicken burger", FALSE),
+    ("Doulble Stack Beon", FALSE),
+    ("Angry Whopper", FALSE),
+    ("Regular Burger", FALSE)
