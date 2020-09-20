@@ -8,7 +8,7 @@ body {
 
 div.jumbotron {
 	background-color: transparent;
-	color: blue;
+	color: wheat;
 	font-weight: bolder;
 	font-style: normal;
 	font-size: xx-large;
@@ -28,7 +28,8 @@ label[for="burger"] {
 
 div.add-burger {
 	width: 60%;
-	background-color:orange;
+	background-color: transparent;
+	color: white;
 	opacity: 1;
 	padding: 20px;
 	margin-bottom: 50px;
@@ -53,12 +54,14 @@ div.burgers .burger-heading {
 }
 
 div.burger-col {
-	background-color: orange;
+	background-color:orange;
+	color: red;
 	min-height: 300px;
 }
 
 li.burger-li {
-	background-color: orange;
+	background-color:orange;
+	color: red;
 	list-style-type: none;
 	border-bottom: 1px solid black;
 }
