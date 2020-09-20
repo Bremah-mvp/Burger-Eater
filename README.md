@@ -1,5 +1,4 @@
-# 
-BURGER EATER 
+# BURGER EATER APPLICATION
 
 [![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/DAVFoundation/captain-n3m0/blob/master/LICENSE)
 
@@ -34,8 +33,42 @@ BURGER EATER
  DEPLOYED LINK AT HEROKU:
 
                     SCREENSHOTS OF THE APPLICATION WHILE IN USE 
+    https://github.com/Bremah-mvp/Burger-Eater/blob/master/public/assets/css/images/Screenshot%20.png
 
 
 
-                    TECHNOLOGIES USED TO CREATE THE APPLICATION    
+                    TECHNOLOGIES USED TO CREATE THE APPLICATION  
+                    
+.Node.js
+
+.Express
+
+.Handlebars
+
+.MySQL
+
+.Heroku  
+
+                  INSTALLATION
+
+    To install dependencies, run the following:
+
+npm i
+
+Then, build and seed the database with the files in the db folder.
+
+                    USAGE
+
+After downloading the files and installing dependencies, run
+
+node server.js
+
+                  LICENSE
+
+This repository is licensed under the MIT license.
+
+Questions
+
+Questions about this repository? Please contact me at mvpbremah@gmail.com View more of my work in GitHub at Bremah-mvp
+
 
