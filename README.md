@@ -33,7 +33,7 @@
  DEPLOYED LINK AT HEROKU:
 
                     SCREENSHOTS OF THE APPLICATION WHILE IN USE 
-    https://github.com/Bremah-mvp/Burger-Eater/blob/master/public/assets/css/images/Screenshot%20.png
+   ![text](https://github.com/Bremah-mvp/Burger-Eater/blob/master/public/assets/css/images/Screenshot%20.png)
 
 
 
